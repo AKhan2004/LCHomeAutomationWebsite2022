@@ -1,0 +1,130 @@
+{% extends "base.html" %} {% block title %}Sign Up{% endblock %} {% block
+content %}
+<form method="POST">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card shadow-2-strong" style="border-radius: 1rem">
+          <div class="card-body p-5 text-center">
+            <h3 class="mb-2 text-dark">Sign Up</h3>
+            <a class="mb-3 navbar-brand text-dark"
+              ><img
+                src="..\static\logo.png"
+                alt="Logo"
+                width="45"
+                height="45"
+              />Smart Home Solutions</a
+            >
+            <!-- Email -->
+            <div class="form-outline mb-4">
+              <label class="form-label text-dark" for="email">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Enter email"
+              />
+            </div>
+            <!-- First Name -->
+            <div class="form-outline mb-4">
+              <label class="form-label text-dark" for="firstName"
+                >First Name</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="firstName"
+                name="firstName"
+                placeholder="Enter first name"
+              />
+            </div>
+            <!-- Gender -->
+            <div class="form-outline text-left text-dark mb-4">
+              <p class="text-center">Gender</p>
+              <input type="radio" id="male" name="gender" value="Male" />
+              <label for="male">Male</label><br />
+              <input type="radio" id="female" name="gender" value="Female" />
+              <label for="female">Female</label>
+            </div>
+            <!-- Birthday -->
+            <div class="form-outline mb-4">
+              <label class="form-label text-dark" for="birthday"
+                >Date of Birth:</label
+              ><br />
+              <input type="date" id="birthday" name="birthday" />
+            </div>
+            <!-- Age -->
+            <div class="slidecontainer form-outline mb-4">
+              <label class="form-label text-dark" for="age"
+                ><p class="form-label text-dark">Age: <span id="out"></span></p
+              ></label>
+              <input
+                type="range"
+                min="16"
+                max="120"
+                value="50"
+                class="slider"
+                id="age"
+              />
+            </div>
+            <!-- Password 1 -->
+            <div class="form-outline mb-4">
+              <label class="form-label text-dark" for="password1"
+                >Password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="password1"
+                name="password1"
+                placeholder="Enter password"
+              />
+            </div>
+            <!-- Password 2 -->
+            <div class="form-outline pb-2 mb-4">
+              <label class="form-label text-dark" for="password2"
+                >Password (Confirm)</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="password2"
+                name="password2"
+                placeholder="Confirm password"
+              />
+            </div>
+            <!-- Plan -->
+            <div class="form-outline pb-2 mb-4">
+              <label class="form-label text-dark" for="plan"
+                >Select a plan:</label
+              >
+              <select id="plan" name="plan">
+                <option value="Free">Free</option>
+                <option value="Pro">Pro</option>
+                <option value="Enterprise">Enterprise</option>
+              </select>
+            </div>
+            <!-- Sign Up Button -->
+            <button
+              class="btn btn-warning btn-lg text-white btn-block mb-2"
+              type="submit"
+            >
+              Sign Up
+            </button>
+            <!-- Other Button -->
+            <div class="text-dark">
+              <p class="mb-0">
+                Already have an account?
+                <a href="/login" class="nav-link text-info font-weight-bold"
+                  >Login</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "base.html" %} {% block title %}Login{% endblock %} {% block content
+%}
+<form method="POST">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card shadow-2-strong" style="border-radius: 1rem">
+          <div class="card-body p-5 text-center">
+            <h3 class="mb-2 text-dark">Login</h3>
+            <a class="mb-3 navbar-brand text-dark"
+              ><img
+                src="..\static\logo.png"
+                alt="Logo"
+                width="45"
+                height="45"
+              />Smart Home Solutions</a
+            >
+            <!-- Email -->
+            <div class="form-outline mb-3">
+              <label class="form-label text-dark" for="email">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Enter email"
+              />
+            </div>
+            <!-- Password -->
+            <div class="form-outline pb-2 mb-4">
+              <label class="form-label text-dark" for="password"
+                >Password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                placeholder="Enter password"
+              />
+            </div>
+            <!-- Login Button -->
+            <button
+              class="btn btn-outline-info btn-lg btn-block mb-2"
+              type="submit"
+            >
+              Login
+            </button>
+            <!-- Other Button -->
+            <div class="text-dark">
+              <p class="mb-0">
+                Don't have an account?
+                <a
+                  href="/sign-up"
+                  class="nav-link text-warning font-weight-bold"
+                  >Sign Up</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+{% endblock %}

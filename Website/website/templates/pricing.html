@@ -1,0 +1,88 @@
+{% extends "base.html" %} {% block title %}Pricing{% endblock %} {% block
+pricing %}
+<li>
+  <a href="/pricing" class="nav-link px-2 text-secondary">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      fill="currentColor"
+      class="bi bi-tag d-block mx-auto mb-1"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-1 0a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0z"
+      />
+      <path
+        d="M2 1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 1 6.586V2a1 1 0 0 1 1-1zm0 5.586 7 7L13.586 9l-7-7H2v4.586z"
+      />
+    </svg>
+    Pricing
+  </a>
+</li>
+{% endblock %} {% block content %}
+<h1 class="text-center">Choose a bundle to get started</h1>
+<br />
+<div class="container">
+  <div class="card-deck mb-3 text-center text-dark">
+    <!-- Plan 1 -->
+    <div class="card mb-4 box-shadow">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Free</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">
+          €0 <small class="text-muted">/ mo</small>
+        </h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>1 user included</li>
+          <li>Access to all features</li>
+          <li>Email support</li>
+          <li>Help center access</li>
+        </ul>
+        <a href="/sign-up" class="btn btn-lg btn-block btn-outline-info"
+          >Sign up for free</a
+        >
+      </div>
+    </div>
+    <!-- Plan 2 -->
+    <div class="card mb-4 box-shadow">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Pro</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">
+          €15 <small class="text-muted">/ mo</small>
+        </h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>20 users included</li>
+          <li>Access to our Beta Program</li>
+          <li>Priority email support</li>
+          <li>Help center access</li>
+        </ul>
+        <a href="/sign-up" class="btn btn-lg btn-block btn-info">Get started</a>
+      </div>
+    </div>
+    <!-- Plan 3 -->
+    <div class="card mb-4 box-shadow">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Enterprise</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">
+          €29 <small class="text-muted">/ mo</small>
+        </h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>30 users included</li>
+          <li>Access to our Beta Program</li>
+          <li>Phone and email support</li>
+          <li>Help center access</li>
+        </ul>
+        <a href="/sign-up" class="btn btn-lg btn-block btn-info"
+          >Get started for business</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

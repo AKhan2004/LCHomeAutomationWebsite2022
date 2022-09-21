@@ -1,0 +1,153 @@
+{% extends "base.html" %} {% block title %}Features{% endblock %} {% block
+features %}
+<li>
+  <a href="/features" class="nav-link px-2 text-secondary">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      fill="currentColor"
+      class="bi bi-grid d-block mx-auto mb-1"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"
+      />
+    </svg>
+    Features
+  </a>
+</li>
+{% endblock %} {% block content %}
+<main role="main" class="container">
+  <div class="row">
+    <div class="col-md-8 blog-main">
+      <h3 class="pb-3 mb-4 font-italic border-bottom">
+        From Smart Home Solutions
+      </h3>
+      <div class="blog-post">
+        <h2 class="blog-post-title">
+          <a id="V1.0"></a>
+          Introducing, SHS Hub, your virtual assistant
+        </h2>
+        <p class="blog-post-meta text-info"><em>January 14, 2022 by Management</em></p>
+        <p>
+          This is Smart Home Solution's first home automation system. Use this
+          device to get the most control of your home with voice inputs and
+          outputs. This device strives from simplicity, giving you the most
+          essential features of a virtual assistant. This system helps to
+          complete daily tasks quickly and efficiently.
+        </p>
+        <p>
+          Our expert engineers developed the code so that your voice recognition
+          device will always be working. There are two modes available,
+          <strong>offline and online</strong>. This device will enable you to
+          work efficiently and easily.
+        </p>
+        <h3>Keep track of time</h3>
+        <p>
+          Keep specific track of time by calling "What time is it?". The system
+          outputs the time with the date, hour and second as well!
+        </p>
+        <pre
+          class="bg-dark text-white"
+        ><code class="pl-1"><strong class="text-warning">speak</strong>(<strong class="text-warning">ctime</strong>())</code></pre>
+        <h3>Need to find a location?</h3>
+        <p>
+          Too tired to type an address? By calling the key word
+          "<strong>location</strong>" then followed up by the address, our
+          system performs a quick Google search to find the location.
+        </p>
+        <ol>
+          <li>First, ask the virtual system to search the address.</li>
+          <li>Then, they will ask what is location of the place.</li>
+          <li>Reply with the address and the output appears on screen.</li>
+        </ol>
+        <p class="pb-3 mb-4 border-bottom">
+          Don't worry, our system doesn't keep track of what you search!
+        </p>
+      </div>
+      <div class="blog-post">
+        <h2 class="blog-post-title">
+          <a id="V1.1"></a>New Search Feature and a To-Do List
+        </h2>
+        <p class="blog-post-meta text-info"><em>February 3, 2022 by Engineers</em></p>
+        <h3>Search with your voice</h3>
+        <p>
+          The location feature has been extended to allow a quick Google search
+          on anything!
+        </p>
+        <blockquote>
+          <p>
+            <em>
+              This feature does not allow Smart Home Solutions to keep track of
+              your search history. A Google account may be required to access
+              some services.
+            </em>
+          </p>
+        </blockquote>
+        <h3>Keep track of your daily tasks with a to-do list</h3>
+        <p class="pb-3 mb-4 border-bottom">
+          A to-do list feature has been introduced into the system. Create, add
+          and delete your to-do list with only your voice. Your virtual
+          assistant can help you keep track of what you need to do.
+        </p>
+      </div>
+      <div class="blog-post">
+        <h2 class="blog-post-title">
+          <a id="V1.2"></a>
+          Link your system with your online account
+        </h2>
+        <p class="blog-post-meta text-info"><em>March 11, 2022 by Management</em></p>
+        <p>
+          Create an account on our website to access your smart home device
+          online. On your <em>Profile</em> page you will see the voice logs of
+          your virtual assistant. You are also able to see your to-do list. In
+          the event that the system does not pick up your voice, you can send a
+          command to your system from the <em>Profile</em> page.
+        </p>
+        <blockquote>
+          <p>
+            <em>
+              This feature does allow Smart Home Solutions to keep track of your
+              voice log history with your system. This helps us keep track of
+              what features and update are needed. An email account may be
+              required to access some services.
+            </em>
+          </p>
+        </blockquote>
+      </div>
+    </div>
+    <aside class="col-md-4 blog-sidebar">
+      <div class="p-3 mb-3 bg-light rounded text-dark">
+        <h4 class="font-italic">About</h4>
+        <p class="mb-0">
+          This article explains the <em>main features</em> of our smart home
+          virtual assistant. Each feature is outlined with its own heading. New
+          features that are in development are also explained here. New features
+          are only available to those part of our <em>beta program</em>.
+        </p>
+      </div>
+      <div class="p-3">
+        <h4 class="font-italic">Archives</h4>
+        <ul class="mb-0">
+          <li>
+            <a href="#V1.0" class="text-warning"
+              >Introduction, January 14, 2022</a
+            >
+          </li>
+          <li>
+            <a href="#V1.1" class="text-warning"
+              >Version 1.1 Update, February 3, 2022</a
+            >
+          </li>
+          <li>
+            <a href="#V1.2" class="text-warning"
+              >Version 1.2 Update, March 11, 2022</a
+            >
+          </li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</main>
+{% endblock %}

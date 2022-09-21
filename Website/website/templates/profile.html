@@ -1,0 +1,141 @@
+{% extends "base.html" %} {% block title %}Profile{% endblock %} {% block
+content %}
+<div class="container">
+  <div class="p-3 text-white">
+    <h1 class="text-center">Hello {{ user.first_name }}!</h1>
+  </div>
+</div>
+<div class="container py-5 h-100 border-bottom">
+  <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+      <div class="card shadow-2-strong" style="border-radius: 1rem">
+        <div class="card-body p-5 text-center">
+          <!-- Email -->
+          <div class="form-outline mb-3">
+            <label class="form-label text-dark">Email:</label>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="{{ user.email }}"
+              aria-label="Disabled email input"
+              disabled
+            />
+          </div>
+          <!-- Plan -->
+          <div class="form-outline mt-3">
+            <label class="form-label text-dark">Plan:</label>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="{{ user.plan }}"
+              aria-label="Disabled plan input"
+              disabled
+            />
+          </div>
+          <!-- Date of Birth -->
+          <div class="form-outline mt-3">
+            <label class="form-label text-dark">Date of Birth:</label>
+            <input
+              class="form-control"
+              type="text"
+              placeholder="{{ user.birthday }}"
+              aria-label="Disabled birthday input"
+              disabled
+            />
+          </div>
+          <!-- Voice Log -->
+          <h5 class="form-label mt-3 text-dark">Voice Log:</h5>
+          <div class="container-fluid text-dark">
+            <form class="form-group" method="post">
+              <label for="command"
+                >Enter an input here for your virtual assistant:</label
+              >
+              <input
+                type="text"
+                class="form-control mb-3"
+                id="command"
+                name="command"
+                placeholder="Enter input"
+              />
+              <button
+                class="btn btn-primary"
+                type="submit"
+                name="submit"
+                value="add_input"
+              >
+                Submit
+              </button>
+              <button
+                class="btn btn-danger"
+                type="submit"
+                name="submit"
+                value="delete_input"
+              >
+                Delete
+              </button>
+            </form>
+            {% for i in log %}
+            <ul class="container">
+              <li class="mt-3 list-group-item">{{i['Output']}}</li>
+            </ul>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container py-5 h-100">
+  <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+      <div class="card shadow-2-strong" style="border-radius: 1rem">
+        <div class="card-body p-5 text-center">
+          <h3 class="mb-2 text-dark">To-Do List</h3>
+          <div class="container-fluid text-dark">
+            <form class="form-group" method="post">
+              <label for="command">Add to your to-do list here:</label>
+              <input
+                type="text"
+                class="form-control mb-3"
+                id="task"
+                name="task"
+                placeholder="Enter task"
+              />
+              <button
+                class="btn btn-primary"
+                type="submit"
+                name="submit"
+                value="add_todo"
+              >
+                Submit
+              </button>
+              <button
+                class="btn btn-danger"
+                type="submit"
+                name="submit"
+                value="delete_todo"
+              >
+                Delete
+              </button>
+            </form>
+            {% for i in task %}
+            <ul class="container">
+              <li class="mt-3 list-group-item">{{i['To Do']}}</li>
+            </ul>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %} {% block js %}
+  <script>
+    // To ensure page contents stay up to date with the online database
+    function timedRefresh(timeoutPeriod) {
+      setTimeout("location.reload(true);", timeoutPeriod);
+    }
+
+    window.onload = timedRefresh(10000);
+  </script>
+  {% endblock %}
+</div>
